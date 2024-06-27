@@ -1,5 +1,4 @@
 FROM openjdk
-COPY target/*.jar /
-COPY --chown=node:node ./package*.json ./
+COPY --chown=node:node ./target/*.jar /
 EXPOSE 8080
 ENTRYPOINT ["java","-jar","/my-app-1.0-SNAPSHOT.jar"]
